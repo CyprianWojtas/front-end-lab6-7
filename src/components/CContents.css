@@ -1,0 +1,31 @@
+.contentsDivClass
+{
+	padding-bottom: 2em;
+}
+.contentsFlex
+{
+	display: flex;
+	margin: 1em 2em;
+}
+.contentsFlexImg
+{
+	max-width: 20em;
+	margin-right: 1.5em;
+	object-fit: contain;
+}
+.contentsFlexTxt
+{
+	text-align: justify;
+}
+
+@media screen and (max-width: 720px)
+{
+	.contentsFlex
+	{
+		flex-flow: column;
+	}
+	.contentsFlexImg
+	{
+		margin: auto;
+	}
+}

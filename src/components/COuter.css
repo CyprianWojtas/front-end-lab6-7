@@ -1,0 +1,11 @@
+.bgClassNormal
+{
+	background-color: cornflowerblue;
+	padding: 10px;
+	border: 3px dashed #2a67ba;
+}
+.bgClassInner
+{
+	background-color: rgb(155, 155, 155);
+	border: 3px dashed #666;
+}

@@ -1,0 +1,33 @@
+.headerContainer
+{
+	display: flex;
+}
+.headerLogo
+{
+	height: 15vmin;
+	pointer-events: none;
+}
+.headerContainer h2
+{
+	flex-grow: 1;
+}
+
+@media (prefers-reduced-motion: no-preference)
+{
+	.headerLogo
+	{
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+@keyframes App-logo-spin
+{
+	from
+	{
+		transform: rotate(0deg);
+	}
+	to
+	{
+		transform: rotate(360deg);
+	}
+}
