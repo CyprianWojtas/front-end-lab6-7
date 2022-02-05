@@ -1,0 +1,18 @@
+.pageContents
+{
+	margin-bottom: auto;
+}
+.pageContents > *
+{
+	max-width: 1536px;
+	margin: 0 auto auto;
+}
+
+@media screen and (max-width: calc(1536px + 2em))
+{
+	.pageContents > *
+	{
+		max-width: 1536px;
+		margin: 0 1em auto;
+	}
+}

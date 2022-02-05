@@ -1,0 +1,33 @@
+.videosPage .movieList
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 1024px)
+{
+	.videosPage .movieList
+	{
+		grid-template-columns: 1fr;
+	}	
+}
+
+.videosPage .movieList .movie
+{
+	margin: 1em;
+	display: flex;
+	gap: 1em;
+	text-align: left;
+}
+.videosPage .movieList .movie img
+{
+	max-height: 256px;
+	object-fit: contain;
+}
+
+@media screen and (max-width: 512px)
+{
+	.videosPage .movieList .movie
+	{
+		flex-flow: column;
+	}
+}

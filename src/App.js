@@ -1,29 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-import { CFooter } from './components/CFooter';
-import CHeader from './components/CHeader';
-import CContents from './components/CContents';
-import COuter from './components/COuter';
+import { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import Pages from "./Pages.js";
+import TopMenu from "./components/TopMenu.js";
+import TopMenuArticleList from "./components/TopMenuArticleList.js";
+import PageHeader from "./components/PageHeader.js";
+import PageFooter from "./components/PageFooter.js";
 
 
-function App()
+class App extends Component
 {
-	return (
-		<div className="App">
-			<CHeader aName="Cyprian" aFamily="Wojtas"/>
-			{/* <CHeader aName="Tomasz" aFamily="Nowak"/> */}
-
-			<CContents/>
-			<COuter/>
-
-			<CFooter weather="słoneczna" temp="25">
-				<p>Niebo jest bezchmurne, wiatr słaby.</p>
-			</CFooter>
-			{/* <CFooter weather="deszczowa" temp="13"/> */}
-			{/* <CFooter weather="śnieżna" temp="-6"/> */}
-		</div> 
-	);
+	render()
+	{
+		return (
+			<Router>
+				<div className="App">
+					<PageHeader/>
+					<TopMenu>
+						<TopMenuArticleList/>
+					</TopMenu>
+					<Pages/>
+					<PageFooter/>
+				</div>
+			</Router>
+		);
+	}
 }
 
 export default App;

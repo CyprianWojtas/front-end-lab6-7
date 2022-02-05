@@ -1,0 +1,57 @@
+.topMenu
+{
+	background: #222;
+	color: #FFF;
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+}
+.topMenu > *
+{
+	color: #FFF;
+	vertical-align: middle;
+	margin: 0.5em;
+	display: inline-block;
+	white-space: nowrap;
+	font-family: eurofurence, sans-serif;
+	font-size: 1.25em;
+	text-decoration: none;
+	position: relative;
+	outline: none;
+	border: none;
+}
+@media screen and (max-width: 512px)
+{
+	.topMenu
+	{
+		position: static;
+	}
+	.topMenu > *
+	{
+		display: block;
+	}
+}
+.topMenu > .navButton::after
+{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 1px;
+	background: #FFF;
+	transition-duration: 0.2s;
+}
+.topMenu > .navButton:hover::after,
+.topMenu > .navButton:focus::after,
+.topMenu > .navButton.active::after
+{
+	left: 0;
+	width: 100%;
+}
+.topMenu > .navButton::-moz-focus-inner
+{
+	border: 0;
+}

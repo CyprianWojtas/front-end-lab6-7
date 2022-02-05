@@ -1,0 +1,47 @@
+.videoPlayer
+{
+	margin: 1em;
+	display: grid;
+	grid-template-columns: 2em 9fr 1fr;
+}
+.videoPlayer video
+{
+	width: 100%;
+	max-height: 80vh;
+	object-fit: contain;
+	display: block;
+	margin: auto;
+	grid-column: 1 / 4;
+	background: #000;
+	transition: opacity 0.5s;
+}
+.videoPlayer video.buffering
+{
+	opacity: 0.75;
+	background: radial-gradient(circle, #000, #000E 10%, #000 12%, #000);
+	background-position: center;
+	animation: buffering 5s infinite;
+}
+@keyframes buffering
+{
+	from { background-size: 100%; }
+	50%  { background-size: 150%; }
+	to   { background-size: 100%; }
+}
+.videoPlayer .volumeBar
+{
+	min-width: 4em;
+}
+.videoPlayer .videoError
+{
+	width: 100%;
+	padding: 2em 0;
+	background: #000;
+	color: #FFF;
+	grid-column: 1 / 4;
+	font-size: 1.27em;
+}
+.videoPlayer .videoState
+{
+	grid-column: 1 / 4;
+}

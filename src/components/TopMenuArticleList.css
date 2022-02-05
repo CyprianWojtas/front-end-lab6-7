@@ -1,0 +1,40 @@
+.topMenuArticles
+{
+	height: 1em;
+	position: relative;
+	margin: 0;
+	padding: 0.5em;
+	cursor: default;
+}
+.topMenuArticles .foldingMenu
+{
+	position: absolute;
+	top: 2em;
+	left: 50%;
+	background: #222;
+	transform: translateX(-50%);
+	padding: 0.5em 0;
+	pointer-events: none;
+	opacity: 0;
+	transition-duration: 0.2s;
+}
+.topMenuArticles:hover .foldingMenu,
+.topMenuArticles:focus-within .foldingMenu
+{
+	pointer-events: initial;
+	opacity: 1;
+}
+.topMenuArticles .foldingMenu a
+{
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	padding: 0.15em 1em;
+	transition: 0.2s;
+}
+.topMenuArticles .foldingMenu a:hover,
+.topMenuArticles .foldingMenu a:focus,
+.topMenuArticles .foldingMenu a.active
+{
+	background: #444;
+}

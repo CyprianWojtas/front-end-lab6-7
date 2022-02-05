@@ -1,0 +1,40 @@
+.homepageContents
+{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+}
+
+.homepageContents img
+{
+	max-width: 100%;
+}
+.homepageContents .element
+{
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	text-align: left;
+}
+.homepageContents .element .elementImg
+{
+	max-height: 256px;
+	max-width: 256px;
+	border: 1px solid #AAA;
+}
+
+@media screen and (max-width: 900px)
+{
+	.homepageContents
+	{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+	.homepageContents .element
+	{
+		flex-flow: column;
+	}
+}

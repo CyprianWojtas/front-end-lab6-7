@@ -1,0 +1,110 @@
+.eventsPage
+{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.eventsPage > h1
+{
+	grid-column: 1 / 3;
+}
+
+@media screen and (max-width: 720px)
+{
+	.eventsPage > div
+	{
+		grid-column: 1 / 3;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+	.eventsPage > div
+	{
+		font-size: 1.25em;
+	}
+}
+
+.buttonContainer
+{
+	height: 10em;
+	padding: 0.5em;
+	margin: 0.5em;
+	border: 3px dashed #AF8;
+	background: #CFA;
+	color: #FFF;
+	font-size: 2em;
+	cursor: default;
+	position: relative;
+}
+.buttonContainer button
+{
+	position: absolute;
+}
+
+.noContextMenu
+{
+	height: 10em;
+	padding: 0.5em;
+	margin: 0.5em;
+	border: 3px dashed #FA8;
+	background: #FCA;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFF;
+	font-size: 2em;
+	cursor: default;
+}
+.mousePosition
+{
+	height: 10em;
+	padding: 0.5em;
+	margin: 0.5em;
+	border: 3px dashed #8AF;
+	background: #ACF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFF;
+	font-size: 2em;
+	cursor: default;
+}
+.draggableElments
+{
+	height: 11em;
+	margin: 0.5em;
+	border: 3px dashed #F8A;
+	background: #FAC;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	align-items: center;
+	justify-content: center;
+	color: #FFF;
+	font-size: 2em;
+	cursor: default;
+}
+.draggableElments > div
+{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 0.5em;
+}
+.draggableElments > div:nth-child(2n - 1)
+{
+	border-right: 3px dashed #F8A;
+}
+.draggableElments > div:nth-child(1),
+.draggableElments > div:nth-child(2)
+{
+	border-bottom: 3px dashed #F8A;
+}
+.draggableElments .dragOver
+{
+	background: #FFF2;
+}
+.dragged
+{
+	opacity: 0.5;
+}

@@ -1,0 +1,26 @@
+.article img
+{
+	max-width: 100%;
+}
+.article table
+{
+	border-collapse: collapse;
+}
+.article table th,
+.article table td
+{
+	padding: 0.25em;
+}
+.article table th
+{
+	background: #DDD;
+}
+
+.article table tr:nth-child(odd)
+{
+	background: #FFF;
+}
+.article table tr:nth-child(even)
+{
+	background: #EEE;
+}

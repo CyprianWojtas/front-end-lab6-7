@@ -1,0 +1,22 @@
+.pageHeader a
+{
+	text-decoration: none;
+	color: inherit;
+}
+.pageHeader img
+{
+	max-height: 64px;
+	vertical-align: middle;
+	animation: logo-spin 30s linear infinite;
+}
+@keyframes logo-spin
+{
+	0%
+	{
+		transform: rotate(0);
+	}
+	100%
+	{
+		transform: rotate(1turn);
+	}
+}
